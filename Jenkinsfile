@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        MY_VARIABLE = 'value'
+        MY_VARIABLE = 'variable changed'
     }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'echo "Application deployed"'
+                bat 'echo "Application deployed"' 
             }
         }
     }
