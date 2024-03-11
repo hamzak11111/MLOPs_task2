@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        MY_VARIABLE = 'value'
+    }
 
     stages {
         stage('Install') {
@@ -11,6 +14,11 @@ pipeline {
         stage('Test') {
             steps {
                 bat 'pytest test.py'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                bat 'echo "Application deployed"'
             }
         }
     }
