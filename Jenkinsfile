@@ -14,10 +14,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Clean up or additional steps can be added here
-        }
-    }
 }
